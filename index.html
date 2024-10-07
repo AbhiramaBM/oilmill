@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annaporneshwari Oil Mill</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="abhi.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head> 
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="#">Annaporneshwari Oil Mill</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="abhi.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h4>note this is sample website not a real one</h4>
+    <div class="header text-center">
+        <h1>Welcome to Annaporneshwari Oil Mill</h1>
+        <p>Your Trusted Source for 100% Pure Coconut, Groundnut, Sunflower, and Sesame Oils</p>
+    </div>
+
+    <div id="about" class="container text-center my-5">
+        <h2>About Us</h2>
+        <p class="lead">Annaporneshwari Oil Mill is dedicated to providing the highest quality oils, using traditional cold compression methods to retain the natural goodness and rich flavors. Our oils are ideal for cooking, skincare, and overall wellness.
+            <strong>you can also visit our website <a href="abhi.html">click</a></strong>
+        </p>
+    </div>
+
+    
+    <div id="products" class="products-section text-center">
+        <h2>Our Products</h2>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="coco.jpg" class="card-img-top" alt="Coconut Oil">
+                        <div class="card-body">
+                            <h5 class="card-title">Coconut Oil</h5>
+                            <p class="card-text">100% pure coconut oil, made from coconuts grown on our own land. Perfect for cooking, skincare, and wellness.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal" onclick="setProduct('Coconut Oil', 280)">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="ground.jpg" class="card-img-top" alt="Groundnut Oil">
+                        <div class="card-body">
+                            <h5 class="card-title">Groundnut Oil</h5>
+                            <p class="card-text">Rich in flavor and high in nutritional value, perfect for sautéing, frying, and all your cooking needs.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal" onclick="setProduct('Groundnut Oil', 500)">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="sun.jpg" class="card-img-top"  width="200vh"height="190vh"  alt="Sunflower Oil">
+                        <div class="card-body">
+                            <h5 class="card-title">Sunflower Oil</h5>
+                            <p class="card-text">Light and versatile, our sunflower oil is ideal for cooking and maintaining a healthy lifestyle.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal" onclick="setProduct('Sunflower Oil', 280)">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="yal.jpg" class="card-img-top" width="200vh"height="190vh" alt="Sesame Oil">
+                        <div class="card-body">
+                            <h5 class="card-title">Sesame Oil</h5>
+                            <p class="card-text">Highly valued for its nutty flavor and health benefits. Ideal for cooking and therapeutic uses.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal" onclick="setProduct('Sesame Oil', 400)">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="container text-center my-5">
+        <h2>Contact Us</h2>
+        <p class="lead">We would love to hear from you! Reach out to us at the address below:</p>
+        <address>
+            <strong>Annaporneshwari Oil Mill</strong><br>
+            Talamakki,kudregundi<br>
+            koppa, Karnataka, 566227<br>
+            India<br>
+            <a href="mailto:info@annaporneshwarioilmill.com">info@annaporneshwarioilmill.com</a><br>
+            Phone: +91-9900426040
+        </address>
+    </div>
+
+    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderModalLabel">Order Now</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm" action="mailto:abhirama35993@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="productName">Product Name:</label>
+                            <input type="text" class="form-control" id="productName" name="product" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity (Liters):</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" min="1" onchange="calculatePrice()" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Total Price:</label>
+                            <input type="text" class="form-control" id="price" name="price" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Customer Address:</label>
+                            <textarea class="form-control" id="customerAddress" name="customerAddress" rows="3" placeholder="Enter your full address" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Confirm Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Dynamic Pricing -->
+    <script>
+        let unitPrice = 0;
+
+        function setProduct(name, price) {
+            document.getElementById('productName').value = name;
+            unitPrice = price;
+            document.getElementById('price').value = ''; // Reset the price field
+        }
+
+        function calculatePrice() {
+            const quantity = document.getElementById('quantity').value;
+            document.getElementById('price').value = unitPrice * quantity;
+        }
+    </script>
+</body>
+</html>
